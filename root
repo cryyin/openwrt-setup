@@ -1,0 +1,4 @@
+0 4 * * * lua /usr/share/passwall/rule_update.lua nil log > /dev/null 2>&1 &
+0 3 * * * lua /usr/share/passwall/subscribe.lua start log > /dev/null 2>&1 &
+*/40 * * * * /etc/init.d/frp restart
+*/1 * * * * bash /etc/autologin.sh
